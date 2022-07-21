@@ -63,12 +63,12 @@ public class AsynchronousAPI extends HttpServlet{
 
 
                     HttpClient httpclient = HttpClients.createDefault();
-                    HttpPost httpPost = new HttpPost("http://webhook.site/39c36db6-a973-41eb-adaa-bb1440512281");
+                    HttpPost httpPost = new HttpPost("https://event-relay.fortellis.io/v2/events");
 
                     httpPost.setEntity(new StringEntity(data, "UTF-8"));
                     httpPost.setHeader("Authorization", "Bearer " + token);
-                    httpPost.setHeader("partitionKey", "bc215df6-b784-4f68-ac0b-fe749cde4310");
-                    httpPost.setHeader("Data-Owner-Id", "b74c3f9a-17ee-4943-81f2-ae22bb4f260d");
+                    httpPost.setHeader("partitionKey", "{yourPartitionKey}");
+                    httpPost.setHeader("Data-Owner-Id", "{yourOrganizationID}");
                     UUID uuid = UUID.randomUUID();
                     httpPost.setHeader("X-Request-Id", uuid.toString());
 
