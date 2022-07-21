@@ -28,10 +28,10 @@ public class TokenPost extends HttpServlet{
     public TokenPost() throws UnsupportedEncodingException{
 
         HttpClient httpclient = HttpClients.createDefault();
-        HttpPost httpPost = new HttpPost("https://identity.fortellis.io/oauth2/aus1ni5i9n9WkzcYa2p7/v1/token");
+        HttpPost httpPost = new HttpPost("https://identity-dev.fortellis.io/oauth2/aus1ni5i9n9WkzcYa2p7/v1/token");
         httpPost.setHeader("Accept", "application/json");
 
-        httpPost.setHeader("Authorization", "Basic yourBase64Encoded{ClientID:ClientSecret}");
+        httpPost.setHeader("Authorization", "Basic RFlIcGNwWnJxV3pPTnZzM1pMWEU5M2I0R0ZBcFBwRTY6VVp2U1NQNHkydDAyQ1lBMw==");
         List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
 
         nameValuePairs.add(new BasicNameValuePair("grant_type","client_credentials"));
