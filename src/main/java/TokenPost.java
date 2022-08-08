@@ -12,7 +12,6 @@ import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
@@ -42,7 +41,6 @@ public class TokenPost extends HttpServlet{
             HttpResponse response = httpclient.execute(httpPost);
             entity = response.getEntity();
             if (entity != null) {
-                InputStream token = (InputStream) entity.getContent();
                 object = new JSONObject(EntityUtils.toString(entity));
                 System.out.println("This is your token: " + object.getString("access_token"));
 
