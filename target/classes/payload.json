@@ -1,16 +1,1 @@
-{
-    "id": "fdd620f5-bf60-4797-bf0a-f558211afb6f",
-    "number": 16,
-    "haveYouSaidHello": true,
-    "waysToSayHello": [
-        "Hello",
-        "Hola",
-        "Hallo",
-        "Bonjour",
-        "Ola"
-    ],
-    "helloID": {
-        "language": "English",
-        "id": "fdd620f5-bf60-4797-bf0a-f558211afb6f"
-    }
-}
+{"something": "someContent"}
