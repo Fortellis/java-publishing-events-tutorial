@@ -49,7 +49,7 @@ public class ReceivedRequests extends HttpServlet{
             ClassLoader classLoader = getClass().getClassLoader();
             File  wholeFile =new File (classLoader.getResource("payload.json").getFile());
             Path path = Paths.get(wholeFile.toString());
-            String str = newEventRequest.toString();
+            String str = newEventRequest;
             byte[] arr = str.getBytes();
             try{
                 Files.write( path, arr);
