@@ -48,8 +48,9 @@ public class AsynchronousAPI extends HttpServlet{
 
                     System.out.println(data);
 
-                    TokenPost TokenPost = new TokenPost();
-                    JSONObject tokenObject = TokenPost.object;
+                    TokenPost GetToken = new TokenPost();
+                    JSONObject tokenObject = GetToken.object;
+                    
                     System.out.println("This is the token: " + tokenObject.getString("access_token"));
                     String token = tokenObject.getString("access_token");
 
