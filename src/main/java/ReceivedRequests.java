@@ -39,9 +39,6 @@ public class ReceivedRequests extends HttpServlet{
         newEvent(eventRequest);
 
         AsynchronousAPI Event = new AsynchronousAPI();
-        String update = Event.data;
-        System.out.println("This is the updated data: " + update);
-
 
     }
     public void newEvent(String newEventRequest) {
