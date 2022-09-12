@@ -64,6 +64,8 @@ public class AsynchronousAPI extends HttpServlet{
                     httpPost.setHeader("Data-Owner-Id", "{yourOrganizationID}");
                     UUID uuid = UUID.randomUUID();
                     httpPost.setHeader("X-Request-Id", uuid.toString());
+                    httpPost.setHeader("Accept", "application/json");
+                    httpPost.setHeader("Content-Type", "application/json");
 
 
                     try{
