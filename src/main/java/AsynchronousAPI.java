@@ -56,7 +56,7 @@ public class AsynchronousAPI extends HttpServlet{
 
 
                     HttpClient httpclient = HttpClients.createDefault();
-                    HttpPost httpPost = new HttpPost("https://event-relay.fortellis.io/v2/events");
+                    HttpPost httpPost = new HttpPost("https://event-relay.fortellis.io/v2/events/{yourChannel}");
 
                     httpPost.setEntity(new StringEntity(data, "UTF-8"));
                     httpPost.setHeader("Authorization", "Bearer " + token);
